@@ -5,7 +5,7 @@ import '../../modules/pages/about/presentation/ui/about_page.dart';
 import '../../modules/pages/favorites/presentation/ui/favorites_page.dart';
 import '../../modules/pages/files/presentation/ui/files_page.dart';
 import '../../modules/pages/history/presentation/ui/history_page.dart';
-import '../../modules/pages/home/presentation/ui/home_page.dart';
+import '../../modules/pages/home/presentation/ui/home.dart';
 import '../../modules/pages/recent/presentation/ui/recent_page.dart';
 import '../../modules/pages/settings/presentation/ui/settings_page.dart';
 import '../../modules/pages/trash/presentation/ui/trash_page.dart';
@@ -15,7 +15,7 @@ abstract final class AppRouteManager {
   static final router = GoRouter(
     initialLocation: RouteNames.home,
     routes: [
-      GoRoute(path: RouteNames.home, builder: (_, __) => const HomePage()),
+      GoRoute(path: RouteNames.home, builder: (_, __) => const Home()),
       GoRoute(path: RouteNames.files, builder: (_, __) => const FilesPage()),
       GoRoute(path: RouteNames.recent, builder: (_, __) => const RecentPage()),
       GoRoute(path: RouteNames.favorites, builder: (_, __) => const FavoritesPage()),

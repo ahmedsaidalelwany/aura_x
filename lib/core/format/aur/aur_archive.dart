@@ -2,7 +2,8 @@ import 'dart:convert';
 
 import 'package:archive/archive.dart';
 
-import '../../../constants/app_constants.dart';
+import '../../constants/app_constants.dart';
+
 
 class AurArchive {
   const AurArchive();
@@ -19,7 +20,7 @@ class AurArchive {
     final archive = ZipDecoder().decodeBytes(bytes);
     return {
       for (final file in archive.files)
-        file.name: file.readBytes(),
+        file.name: ?file.readBytes(),
     };
   }
 
