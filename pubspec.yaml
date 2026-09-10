@@ -2,25 +2,13 @@ name: aura_x
 description: "Aura-X — offline-first adaptive file management application"
 publish_to: 'none'
 
-# App version: major.minor.patch+build
-# Supported Aura-X / .aur format versioning is managed separately from the app build version.
+
 version: 1.0.0+1
 
 environment:
   sdk: ^3.13.1
 
-# ============================================================
-# RUNTIME DEPENDENCIES
-# ============================================================
-# Dependency policy:
-# - Offline-first by default.
-# - Hive + Shared Preferences for local persistence.
-# - BLoC + GetIt/Injectable for state and dependency management.
-# - Responsive/adaptive UI without fixed design-size scaling.
-# - .aur is handled by the file engine; archive provides the container layer.
-# - Google Drive is optional and isolated behind a cloud adapter.
-# - File-type viewers are selected through a handler/registry architecture.
-# - No Isar. No duplicate state-management or loading packages.
+
 
 dependencies:
   flutter:
@@ -37,6 +25,8 @@ dependencies:
   animations: ^3.0.0
   rive: ^0.14.11
   skeletonizer: ^2.1.3
+  flutter_screenutil: ^5.9.3
+
 
   # Application architecture / navigation / state
   bloc: ^9.2.1
@@ -49,6 +39,7 @@ dependencies:
 
   # Localization / formatting
   intl: ^0.20.3
+  localization: ^2.1.1
 
   # Local persistence / preferences
   hive: ^2.2.3
@@ -71,7 +62,7 @@ dependencies:
   crypto: ^3.0.7
   cryptography: ^2.9.0
   cryptography_flutter: ^2.3.4
-  flutter_secure_storage: ^11.0.0
+  flutter_secure_storage: ^11.1.0
 
   # File viewers / document handling
   syncfusion_flutter_pdfviewer: ^34.2.7
