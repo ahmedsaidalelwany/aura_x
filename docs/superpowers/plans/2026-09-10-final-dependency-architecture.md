@@ -32,13 +32,14 @@
 - Remove redundant `flutter_screenutil`, `provider`, `shimmer`, and external `localization`.
 - Add official `flutter_localizations` SDK dependency.
 - Add GetIt and injectable generation support.
-- Add Hive Flutter integration and Hive code generation.
+- Add Hive Flutter integration. Hive adapters will be deliberately maintained as application-owned adapters rather than depending on the legacy Hive generator, avoiding an unnecessary analyzer/code-generation constraint.
 - Add archive support for the `.aur` container.
 - Add explicit `path` and `crypto` dependencies for file/path/integrity operations.
 - Replace `encrypt` with `cryptography` + `cryptography_flutter` for modern authenticated encryption primitives.
 - Add connectivity awareness for optional cloud synchronization.
 - Add Freezed + JSON serialization for immutable models and generated serialization.
 - Add bloc_test, mocktail, and integration_test for testing.
+- Add `share_plus` for native file/content sharing.
 - Keep Google Drive packages isolated as optional cloud infrastructure dependencies.
 - Keep file viewers/adapters only where they correspond to planned handlers; do not add speculative media packages.
 
